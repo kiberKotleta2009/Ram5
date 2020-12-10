@@ -7,10 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def menu():
     s = "<ul>"
-    s += '<li><p><a href="https://ram5pls.herokuapp.com/task1/random">task1/random</a></p></li>'
-    s += '<li><p><a href="https://ram5pls.herokuapp.com/task1/i_will_not">task1/i_will_not</a></p></li>'
-#     s += '<li><p><a href="http://127.0.0.1:5000/task1/random">task1/random</a></p></li>'
-#     s += '<li><p><a href="http://127.0.0.1:5000/task1/i_will_not">task1/i_will_not</a></p></li>'
+    s += '<li><p><a href="task1/random">task1/random</a></p></li>'
+    s += '<li><p><a href="task1/i_will_not">task1/i_will_not</a></p></li>'
     s += "</ul>"
     out = "<pre id=menu>{}</pre>".format(s)
     return out
@@ -43,4 +41,5 @@ def task1_never():
     return out
 
 
-app.run()
+if __name__ == "__main__":
+    app.run()
